@@ -1,2 +1,9 @@
 node_modules
 .DS_Store
+example
+bundle.js
+yarn.lock
+yarn-error.log
+*.swp
+working
+*.monopic

@@ -1,0 +1,14 @@
+{
+  "name": "windyjs",
+  "version": "1.0.0",
+  "description": "A Little Toy Javascript Module Bundler",
+  "main": "index.js",
+  "repository": "git@github.com:adamisntdead/windy.git",
+  "author": "Adam Kelly <adamkelly2201@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "detective": "^5.1.0",
+    "resolve": "^1.8.1"
+  }
+}
