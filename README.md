@@ -1,4 +1,4 @@
-# Windy 💨
+# wbpck 
 
 > A Little Toy Javascript Module Bundler
 
