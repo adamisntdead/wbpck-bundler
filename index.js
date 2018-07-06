@@ -85,6 +85,7 @@ function createModuleObject(filepath) {
   return { id, filepath, source, requires }
 }
 
+//
 //   Looking at this `createDependencyObject` function, the notable part
 //   is the call to a function called `detective`.
 //
@@ -106,17 +107,18 @@ function createModuleObject(filepath) {
 
 //   So what does running this function on the path of a module give?
 //
+//
 //                                             {
-//   ╭───────────────────────────────────╮       id: 0,
-//   │ ◎ ○ ○         app.js              │       filepath: '/Users/john/app.js',
-//   ├───────────────────────────────────┤       requires: [ './log', './utils' ],
-//   │ const log = require('./logging')  │       source: `
-//   │ const util = require('./utils')   │         const log = require('./logging')
-//   │                                   ├────▶    const util = require('./utils')
-//   │ log('hello world!')               │
-//   │                                   │         log('hello world!')
-//   │                                   │       `
-//   └───────────────────────────────────┘     }
+//   ╭-----------------------------------╮       id: 0,
+//   | ◎ ○ ○         app.js              |       filepath: '/Users/john/app.js',
+//   +-----------------------------------+       requires: [ './log', './utils' ],
+//   | const log = require('./logging')  |       source: `
+//   | const util = require('./utils')   |         const log = require('./logging')
+//   |                                   +---->    const util = require('./utils')
+//   | log('hello world!')               |
+//   |                                   |         log('hello world!')
+//   |                                   |       `
+//   +-----------------------------------+     }
 //
 
 
@@ -143,19 +145,19 @@ function createModuleObject(filepath) {
 //
 //
 //
-//            ┌─────────────┐                      ┌───────────┐
-//            │ Modules Map │                      │  Modules  │
-//       ┌────┴───────────┬─┴───┐            ┌─────┼───────────┴────┐
-//    ┌──┼───▶./utils     │  2 ◀┼──┐         │  2  │    { ... }     │
-//    │  ├────────────────┼─────┤  │         ├─────┼────────────────┤
-//    │  │    ./logger    │  3  │  │         │  3  │    { ... }     │
-//    │  ├────────────────┼─────┤  │         ├─────┼────────────────┤
-//    │  │     moment     │  4  │  │         │  3  │    { ... }     │
-//    │  ├────────────────┼─────┤  │         ├─────┼────────────────┤
-//    │  │      ...       │ ... │  │         │ ... │      ...       │
-//    │  └────────────────┴─────┘  │         └─────┴────────────────┘
-//    │                            │
-//    │                            │
+//            +-------------+                      +-----------+
+//            | Modules Map |                      |  Modules  |
+//       +----+-----------+-+---+            +-----+-----------+----+
+//    +--+--->./utils     |  2 <+--+         |  2  |    { ... }     |
+//    |  +----------------+-----+  |         +-----+----------------+
+//    |  |    ./logger    |  3  |  |         |  3  |    { ... }     |
+//    |  +----------------+-----+  |         +-----+----------------+
+//    |  |     moment     |  4  |  |         |  3  |    { ... }     |
+//    |  +----------------+-----+  |         +-----+----------------+
+//    |  |      ...       | ... |  |         | ... |      ...       |
+//    |  +----------------+-----+  |         +-----+----------------+
+//    |                            |
+//    |                            |
 //  argument to                  module
 //    require                  object's id
 
