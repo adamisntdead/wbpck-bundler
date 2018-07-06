@@ -6,7 +6,7 @@ A module bundler is a tool that takes all of your code and all of your codes dep
 
 In this repo, I will (attempt to) build a little toy module bundler for learning purposes 📝
 
-```js
+
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 // ┃ Hello! Welcome, welcome, it's great to have you here!                ┃
 // ┃ Today we're going to be building a really simple Javascript module   ┃
@@ -357,4 +357,3 @@ module.exports = entry => pack(getModules(entry))
 // ┃  Thanks for reading and I hope you have enjoyed a look into the      ┃
 // ┃  workings of our simple module bundler!                              ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-```
