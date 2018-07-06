@@ -17,7 +17,7 @@
 
 //  Let's start with what a module bundler actually is.
 //
-//  You may have used tools such as Browserify, Webpack, Rollup or one of
+//  You may have used tools such as browserify, webpack, rollup or one of
 //  many others, but a module bundler is a tool that takes pieces of
 //  javascript and takes them and their dependencies and makes it into a
 //  single file, usually for use in the browser.
