@@ -1,4 +1,4 @@
-# wbpck 
+![wbpck](https://github.com/adamisntdead/windy/blob/master/logo.svg?raw=true)
 
 > A Little Toy Javascript Module Bundler
 
