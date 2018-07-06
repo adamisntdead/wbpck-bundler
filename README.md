@@ -8,13 +8,15 @@ In this repo, I will (attempt to) build a little toy module bundler for learning
 
 ## The Code
 
-You should look at [the code](https://github.com/adamisntdead/wbpck-bundler/blob/master/index.js).
+You should look at [this post about the code](https://adamisntdead.com/lets-write-a-module-bundler/).
 There's only about 60 lines of code, but there is a lot (I mean a lot) of comments explaining
 each part
 
-So [read it](https://github.com/adamisntdead/wbpck-bundler/blob/master/index.js).
+So [read it](https://adamisntdead.com/lets-write-a-module-bundler/).
 
-[Go on](https://github.com/adamisntdead/wbpck-bundler/blob/master/index.js).
+[Go on](https://adamisntdead.com/lets-write-a-module-bundler/).
+
+[You know you want to](https://adamisntdead.com/lets-write-a-module-bundler/)
 
 ## Usage
 
